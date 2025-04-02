@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NavigationComponent } from '../../components/navigation/navigation.component';
 
 @Component({
   selector: 'app-aboutUs',
   standalone: true,
-  imports: [NavigationComponent],
+  imports: [],
   templateUrl: './aboutUs.component.html',
   styleUrl: './aboutUs.component.css',
 })
