@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navigation Component</title>
-    </head>
-    <body>
-        <div class="navigation-container">
-            <div class="logo-container">
-                <img src="/images/copperblock.png" alt="Logo" class="logo">
-            </div>
-            <div class="navigation-container-grid">
-                <button class="grid-item" id="home">Home</button>
-                <button class="grid-item" id="about-us">About us</button>
-                <button class="grid-item" id="contact">Kontakt</button>
-                <button class="grid-item" id="">Item 4</button>
-                <button class="grid-item" id="">Item 5</button>
-            </div>
-        </div>
-    </body>
-</html>
+<div class="navigation-container">
+    <div class="logo-container">
+        <img src="/images/copperblock.png" alt="Logo" class="logo">
+    </div>
+    <nav class="navigation-container-grid">
+        <a class="grid-item" routerLink="/" routerLinkActive="active">Home</a>
+        <a class="grid-item" routerLink="/about" routerLinkActive="active">About us</a>
+        <a class="grid-item" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+    </nav>
+</div>
 
 

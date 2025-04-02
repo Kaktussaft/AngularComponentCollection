@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-component-experimentation": {
+    "AngularComponents": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-component-experimentation",
+            "outputPath": "dist/AngularComponents",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-component-experimentation:build:production"
+              "buildTarget": "AngularComponents:build:production"
             },
             "development": {
-              "buildTarget": "angular-component-experimentation:build:development"
+              "buildTarget": "AngularComponents:build:development"
             }
           },
           "defaultConfiguration": "development"
