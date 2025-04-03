@@ -26,3 +26,11 @@
 .footer-links{
   color: white;
 }
+
+.footer-copyright{
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
