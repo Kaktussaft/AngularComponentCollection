@@ -1,29 +1,72 @@
 <div class="site-style">
   <div class="divider"></div>
   <div class="h1-container">
-    <h1>Über uns</h1>
+    <h1>Unser Team</h1>
   </div>
   <div class="divider"></div>
-  <div class="about-card">
-    <div class="about-card-item">
-      <img
-        src="/images/copperblock.png"
-        alt="Logo"
-        class="about-card-picture"
-      />
-    </div>
-    <div class="about-card-header">
-     <p>Name <br /></p>
-    </div>
-    <div class="about-card-item">
-      <p>
-        Adresse <br />
-        Telefonnummer <br />
-        E-Mail-Adresse <br />
-        Erfahrungen <br/>
-        lorem ipsum
-      </p>
-    </div>
+  <div class="about-cards-layout">
+
+     <app-about-card
+      [imageSrc]="'/images/copperblock.png'"
+      [alt]="'Another Logo'"
+      [name]="'Name'"
+      [address]="'Adresse'"
+      [phone]="'Telefonnummer'"
+      [email]="'E-Mail-Adresse'"
+      [experience]="'Erfahrungen'"
+      [description]="'lorem ipsum'"
+    ></app-about-card>
+
+    <app-about-card
+      [imageSrc]="'/images/copperblock1.jpeg'"
+      [alt]="'Another Logo'"
+      [name]="'Name'"
+      [address]="'Another Address'"
+      [phone]="'Another Phone'"
+      [email]="'Another Email'"
+      [experience]="'More Experiences'"
+      [description]="'Another description'"
+    ></app-about-card>
+
+        <app-about-card
+      [imageSrc]="'/images/copperblock2.jpeg'"
+      [alt]="'Another Logo'"
+      [name]="'Name'"
+      [address]="'Another Address'"
+      [phone]="'Another Phone'"
+      [email]="'Another Email'"
+      [experience]="'More Experiences'"
+      [description]="'Another description'"
+    ></app-about-card>
+
+       <app-about-card
+      [imageSrc]="'/images/copperblock2.jpeg'"
+      [alt]="'Another Logo'"
+      [name]="'Name'"
+      [address]="'Another Address'"
+      [phone]="'Another Phone'"
+      [email]="'Another Email'"
+      [experience]="'More Experiences'"
+      [description]="'Another description'"
+    ></app-about-card>
+
+       <app-about-card
+      [imageSrc]="'/images/copperblock2.jpeg'"
+      [alt]="'Another Logo'"
+      [name]="'Name'"
+      [address]="'Another Address'"
+      [phone]="'Another Phone'"
+      [email]="'Another Email'"
+      [experience]="'More Experiences'"
+      [description]="'Another description'"
+    ></app-about-card>
+
   </div>
   <div class="divider"></div>
+    <div class="h1-container">
+    <h1>Karussel</h1>
+  </div>
+  <div class="divider"></div>
+  <app-carusel></app-carusel>
+   <div class="divider"></div>
 </div>
