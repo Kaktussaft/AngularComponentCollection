@@ -1,14 +1,40 @@
-<div class="login-site">
-  <img
-    src="images/LoginBackground.jpeg"
-    alt="Background"
-    class="background-image"
-  />
-  <div class="login-form">
-    <h1>Login</h1>
-    <div class="form-item">
-
+<div class="login-site hide-overflow">
+   <!-- Login Form -->
+  <div class="login-form" *ngIf="showLoginForm">
+    <div class="login-container">
+      <button class="login-window" (click)="toggleLoginAndRegisterForm()">Register</button>
     </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-user"></i></span>
+      <input type="text" placeholder="Username" />
+    </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-lock"></i></span>
+      <input [type]="passwordType" placeholder="Password" />
+    </div>
+    <button class="login-button">Login</button>
+  </div>
+  <!-- Register Form -->
+  <div class="register-form" *ngIf="!showLoginForm">
+    <div class="login-container">
+      <button class="login-window" (click)="toggleLoginAndRegisterForm()">Login</button>
+    </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-user"></i></span>
+      <input type="text" placeholder="Username" />
+    </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-user"></i></span>
+      <input type="text" placeholder="Email" />
+    </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-lock"></i></span>
+      <input [type]="passwordType" placeholder="Password" />
+    </div>
+    <div class="form-item">
+      <span class="icon"><i class="fa fa-lock"></i></span>
+      <input [type]="passwordType" placeholder="Confirm password" />
+    </div>
+    <button class="login-button">Register</button>
   </div>
 </div>
->
