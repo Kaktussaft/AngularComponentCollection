@@ -5,15 +5,20 @@ import { AboutUsComponent } from '../pages/aboutUs/aboutUs.component';
 import { ContactComponent } from '../pages/contact/contact.component';
 import { ImpressumComponent } from '../pages/impressum/impressum.component';
 import { PrivacyComponent } from '../pages/privacy/privacy.component';
+import { AuthGuard } from '../auth.guard';
 
 
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    {path: 'login', component: LoginComponent},
-    { path: 'about', component: AboutUsComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'impressum', component: ImpressumComponent},
-    { path: 'privacy', component: PrivacyComponent},
-    { path: '**', redirectTo: '' },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'about', component: AboutUsComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
+  {
+    path: 'impressum',
+    component: ImpressumComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'privacy', component: PrivacyComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '' },
 ];

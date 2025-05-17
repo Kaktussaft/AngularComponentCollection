@@ -18,7 +18,7 @@ export class LoginComponent {
   loginData = { username: '', password: '' };
   registerData = { username: '', email: '', password: '', confirmPassword: '' };
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private readonly authService: AuthService, private readonly router: Router) {}
 
   toggleLoginAndRegisterForm() {
     this.showLoginForm = !this.showLoginForm;
@@ -27,7 +27,8 @@ export class LoginComponent {
   login() {
     this.authService.login(this.loginData).subscribe({
       next: (response) => {
-        localStorage.setItem('token', response.token);
+        localStorage.setItem('loginToken', response.token);
+        this.authService.setAuthenticated(true);
         this.router.navigate(['/home']);
       },
       error: (error) => {
