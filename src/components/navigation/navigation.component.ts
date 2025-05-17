@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { AuthService } from '../../services/authentication-service.service';
 
 @Component({
   selector: 'app-navigation',
@@ -8,4 +9,11 @@ import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css',
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+
+  constructor( private readonly authService: AuthService){}
+
+  logout(){
+    this.authService.logout();
+  }
+}
